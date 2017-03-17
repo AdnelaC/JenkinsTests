@@ -8,5 +8,6 @@ gem 'selenium-webdriver', '~> 3.3'
 gem "simplecov"
 gem "simplecov-rcov"
 gem "ci_reporter"
+gem 'rspec-retry', '~> 0.4.5'
 
 #export PATH=$PATH:/home/adnela/Downloads/geckodriver

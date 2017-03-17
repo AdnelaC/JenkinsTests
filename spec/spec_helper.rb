@@ -2,6 +2,7 @@
 
  require 'rubygems'
  require 'watir-webdriver'
+ require 'rspec/retry'
  #require 'require_all'
 
 
@@ -14,25 +15,19 @@ RSpec.configure do |config|
 
  	config.expect_with :rspec do |c|
   		c.syntax = [:should, :expect]
-  		
-=begin
-  		config.before(:all){
-		
-  			@browser=Watir::Browser.new :ff
-        ff=br.execute_script("return navigator.userAgent;")
 
-puts  ff.split("/")[-1]
 
-  			
-  			
-
-  		
-  		}
-=end      
+  # show retry status in spec process
+  config.verbose_retry = true
+  # Try twice (retry once)
+  config.default_retry_count = 2
+  # Only retry when Selenium raises Net::ReadTimeout
+  config.exceptions_to_retry = [Net::ReadTimeout]
+end     
   	
 
 
-end
+
 end
 
 	

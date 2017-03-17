@@ -13,7 +13,6 @@ RSpec.describe "Klix test" do
 	}
 
 
-
 	 
     context "Klix " do
 	
