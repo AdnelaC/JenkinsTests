@@ -3,6 +3,7 @@
  require 'rubygems'
  require 'watir-webdriver'
  require 'rspec/retry'
+ require 'parallel_tests/test/runtime_logger' if ENV['RECORD_RUNTIME']
  #require 'require_all'
 
 
