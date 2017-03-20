@@ -18,8 +18,7 @@ RSpec.describe "Klix test" do
 	
         it "Puts text" do
 	       
-	       
-	       @browser.wait_until{@browser.link(:class=>"logo").exists?}
+	     
 	       puts (@browser.ul(:class=>"categories").text.to_s)
 		   
 			
@@ -28,9 +27,6 @@ RSpec.describe "Klix test" do
 
    end
 
-	
-
-	
 
 
    context "Close browser" do
