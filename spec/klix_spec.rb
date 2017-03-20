@@ -19,7 +19,7 @@ RSpec.describe "Klix test" do
         it "Puts text" do
 	       
 	     
-	       puts "Neki text"
+	       puts (@browser.link(:class=>"dan").text.to_s)
 		   
 			
 		
