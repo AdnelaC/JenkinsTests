@@ -20,8 +20,7 @@ RSpec.describe "Klix test" do
 	       
 	       @browser.wait_until{@browser.div(:class=>"vremenska hidden-md hidden-sm hidden-xs").exists?}
 	       @browser.link(:class=>"dan").click 
-	       puts "Click on day"
-	      # expect(@browser.div(:class=>"kategorizacija").link(:class=>"link").text).to eql("Najnovije")
+	    
 		   
 			
 		
@@ -35,7 +34,7 @@ RSpec.describe "Klix test" do
 	       
 	       @browser.wait_until{@browser.div(:class=>"col-sm-9 col-xs-7").exists?}
 	       expect(@browser.div(:class=>"kategorizacija").link(:href=>"http://www.klix.ba/najnovije").text).to eql("Najnovije")
-		   puts "Page Najnovije"
+		   
 			
 		
 		end
