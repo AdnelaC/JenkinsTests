@@ -15,13 +15,14 @@ RSpec.describe "SportSport test" do
 
 
 	 
-    context "sportsport.ba " do
+    context "Click on TABELE " do
 	
-        it "Puts text" do
-	       
-	       
-	       puts (@browser.ul(:id=>"tabs").text.to_s)
-		   
+        it "New Page Tabele" do
+
+        	@browser.link(:class=>"tables").click
+        	expect(@browser.div(:class=>"table_top_container").exists?)
+
+
 			
 		
 		end

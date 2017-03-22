@@ -14,12 +14,16 @@ RSpec.describe "Klix test" do
 
 
 	 
-    context "Klix " do
+    context "Click on day " do
 	
-        it "Click on day" do
+        it "New Page Najnovije " do
 	       
 	       @browser.wait_until{@browser.div(:class=>"vremenska hidden-md hidden-sm hidden-xs").exists?}
-	       @browser.link(:class=>"dan").click 
+	       @browser.link(:class=>"dan").click
+	       @browser.wait_until{@browser.div(:class=>"col-sm-9 col-xs-7").exists?}
+	       expect(@browser.div(:class=>"kategorizacija").link(:href=>"http://www.klix.ba/najnovije").text).to eql("Najnovije")
+		    
+
 	    
 		   
 			
@@ -27,22 +31,6 @@ RSpec.describe "Klix test" do
 		end
 
    end
-
-   context "Klix" do
-	
-        it "Najnovije" do
-	       
-	       @browser.wait_until{@browser.div(:class=>"col-sm-9 col-xs-7").exists?}
-	       expect(@browser.div(:class=>"kategorizacija").link(:href=>"http://www.klix.ba/najnovije").text).to eql("Najnovije")
-		   
-			
-		
-		end
-
-   end
-
-
-
 
 
    context "Close browser" do
