@@ -45,7 +45,7 @@ RSpec.describe "Klix test" do
 
    	it "Vijesti" do
 
-        @browser.wait_until{@browser.div(:class=>"vremenska hidden-md hidden-sm hidden-xs").exists?}
+        @browser.wait_until{@browser.ul(:class=>"categories").li(:class=>"li_vijesti").exists?}
    		@browser.ul(:class=>"categories").li(:class=>"li_vijesti").click
    		@browser.wait_until{@browser.div(:class=>"breadcrumbs bg_vijesti").exists?}
    		expect(@browser.text).to include ("Vijesti")
@@ -65,6 +65,8 @@ RSpec.describe "Klix test" do
 
    	end
    end
+
+
 
 
    context "Close browser" do
