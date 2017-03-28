@@ -68,6 +68,37 @@ RSpec.describe "Klix test" do
    	end
    end
 
+   context "Click on Sport" do
+
+   	it "Sport" do
+   		@browser.ul(:class=>"categories").li(:class=>"li_sport").click
+   		@browser.wait_until{@browser.div(:class=>"breadcrumbs bg_sport").exists?}
+   		expect(@browser.text).to include ("Sport")
+
+   	end
+   
+   end
+
+   context "Click on Magazin" do
+
+   	it "Magazin" do
+
+   		@browser.ul(:class=>"categories").li(:class=>"li_magazin").click
+   		@browser.wait_until{@browser.div(:class=>"breadcrumbs bg_magazin").exists?}
+   		expect(@browser.text).to include("Magazin")
+   	end
+   end
+
+   context "Click on Lifestyle" do
+
+   	it "Lifestyle" do
+
+   		@browser.ul(:class=>"categories").li(:class=>"li_lifestyle").click
+   		@browser.wait_until{@browser.div(:class=>"breadcrumbs bg_lifestyle").exists?}
+   		expect(@browser.text).to include("Lifestyle")
+   	end
+   end
+
 
 
 
