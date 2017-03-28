@@ -9,6 +9,7 @@ RSpec.describe "Klix test" do
 		
 		@browser=Watir::Browser.new :firefox
 		@browser.goto "http://klix.ba"
+		@browser.window.resize_to(1024, 768) 
 
 	}
 
@@ -49,6 +50,7 @@ RSpec.describe "Klix test" do
    		@browser.ul(:class=>"categories").li(:class=>"li_vijesti").click
    		@browser.wait_until{@browser.div(:class=>"breadcrumbs bg_vijesti").exists?}
    		expect(@browser.text).to include ("Vijesti")
+   		
 
    
    	end
